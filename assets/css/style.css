@@ -629,11 +629,11 @@ body {
 }
 
 .cta-list li:nth-child(1) .cta-card {
-  background-image: url(/assets/images/Baner/cta-1.jpg);
+  background-image: url(/assets/images/Baner/cta1-1.jpg);
 }
 
 .cta-list li:nth-child(2) .cta-card {
-  background-image: url(/assets/images/Baner/cta-2.jpg);
+  background-image: url(/assets/images/Baner/cta2-2.jpg);
 }
 
 .cta-card {
