@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Shirts Collection</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* News Ticker Styles */
+        .news-ticker {
+            background-color: #ff6b6b;
+            color: white;
+            padding: 12px 0;
+            overflow: hidden;
+        }
+
+        .ticker-container {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: ticker-scroll 25s linear infinite;
+        }
+
+        .ticker-content span {
+            margin-right: 40px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        @keyframes ticker-scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Main Section Styles */
+        .section {
+            padding: 40px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Heading Styles */
+        .sec-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .sec-heading h2 {
+            font-size: 28px;
+            color: #333;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .sec-heading h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background-color: #ff6b6b;
+        }
+
+        .view-all {
+            color: #ff6b6b;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .view-all:hover {
+            color: #e05555;
+        }
+
+        /* Product Grid Styles */
+        .collection-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            list-style: none;
+        }
+
+        /* Product Card Styles */
+        .collection-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .collection-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-container {
+            position: relative;
+            overflow: hidden;
+            height: 350px;
+        }
+
+        .img-cart {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .collection-card:hover .img-cart {
+            transform: scale(1.05);
+        }
+
+        .badge-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 1;
+            display: flex;
+            gap: 5px;
+        }
+
+        .new-badge,
+        .discount-badge {
+            color: white;
+            padding: 4px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .new-badge {
+            background: #4CAF50;
+        }
+
+        .discount-badge {
+            background: #ff6b6b;
+        }
+
+        /* Action Buttons */
+        .acation-list {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .collection-card:hover .acation-list {
+            opacity: 1;
+        }
+
+        .action-menu {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .action-menu li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background: white;
+            border-radius: 50%;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        .action-menu li a:hover {
+            background: #ff6b6b;
+            color: white;
+        }
+
+        /* Product Info Styles */
+        .card-content {
+            padding: 15px;
+        }
+
+        .cart-title {
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .desc-product p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .price-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .current-price {
+            font-weight: bold;
+            color: #ff6b6b;
+            font-size: 18px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .collection-list {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+
+            .sec-heading h2 {
+                font-size: 24px;
+            }
+
+            .ticker-content span {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .collection-list {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .img-container {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- News Ticker Section -->
+    <div class="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-content">
+                <span>🔥 Special Offer: 30% discount on all products this week only!</span>
+                <span>🚀 Free shipping for orders over $100</span>
+                <span>🎁 Free gift with every order</span>
+                <span>💳 Secure payment methods available</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Women's Shirts Section -->
+    <section class="section Women">
+        <div class="container">
+            <div class="sec-heading">
+                <h2>Shirts For Women</h2>
+                <a href="#" class="view-all">View All</a>
+            </div>
+
+            <ul class="collection-list">
+                <!-- Product 1 -->
+                <li>
+                    <div class="collection-card">
+                        <div class="badge-container">
+                            <span class="new-badge">New</span>
+                            <span class="discount-badge">-26%</span>
+                        </div>
+
+                        <div class="img-container">
+                            <a href="#">
+                                <img class="img-cart"
+                                    src="../Casmart/assets/images/sweatshirts/mitcha-1418080_1c5183da-70bd-4ea4-926a-8ce2ccde8cc5_300x.jpg"
+                                    alt="Crop Top">
+                            </a>
+                        </div>
+
+                        <div class="acation-list">
+                            <ul class="action-menu">
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="cart-title">Crop Top</h4>
+                            <div class="desc-product">
+                                <p>Leopard Print Biker Shorts</p>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-info">
+                                    <span class="old-price">499.00 $</span>
+                                    <span class="current-price">369.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Product 2 -->
+                <li>
+                    <div class="collection-card">
+                        <div class="badge-container">
+                            <span class="discount-badge">-15%</span>
+                        </div>
+
+                        <div class="img-container">
+                            <a href="#">
+                                <img class="img-cart"
+                                    src="../Casmart/assets/images/sweatshirts/mitcha-1418080_1c5183da-70bd-4ea4-926a-8ce2ccde8cc5_300x.jpg"
+                                    alt="Summer Blouse">
+                            </a>
+                        </div>
+
+                        <div class="acation-list">
+                            <ul class="action-menu">
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="cart-title">Summer Blouse</h4>
+                            <div class="desc-product">
+                                <p>Lightweight Floral Print</p>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-info">
+                                    <span class="old-price">399.00 $</span>
+                                    <span class="current-price">339.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Product 3 -->
+                <li>
+                    <div class="collection-card">
+                        <div class="badge-container">
+                            <span class="new-badge">New</span>
+                        </div>
+
+                        <div class="img-container">
+                            <a href="#">
+                                <img class="img-cart"
+                                    src="../Casmart/assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (1)(1).jpg.jpg"
+                                    alt="Formal Shirt">
+                            </a>
+                        </div>
+
+                        <div class="acation-list">
+                            <ul class="action-menu">
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="cart-title">Formal Shirt</h4>
+                            <div class="desc-product">
+                                <p>Office Wear White Shirt</p>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-info">
+                                    <span class="current-price">299.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Product 4 -->
+                <li>
+                    <div class="collection-card">
+                        <div class="img-container">
+                            <a href="#">
+                                <img class="img-cart"
+                                    src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (1)(2).jpg.jpg"
+                                    alt="Casual T-Shirt">
+                            </a>
+                        </div>
+
+                        <div class="acation-list">
+                            <ul class="action-menu">
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="cart-title">Casual T-Shirt</h4>
+                            <div class="desc-product">
+                                <p>Cotton Oversized T-Shirt</p>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-info">
+                                    <span class="current-price">199.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Product 5 -->
+                <li>
+                    <div class="collection-card">
+                        <div class="badge-container">
+                            <span class="discount-badge">-30%</span>
+                        </div>
+
+                        <div class="img-container">
+                            <a href="#">
+                                <img class="img-cart"
+                                    src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (6)(1).jpg.jpg"
+                                    alt="Denim Shirt">
+                            </a>
+                        </div>
+
+                        <div class="acation-list">
+                            <ul class="action-menu">
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="heart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="button" role="button" tabindex="0">
+                                        <ion-icon name="cart-outline"></ion-icon>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-content">
+                            <h4 class="cart-title">Denim Shirt</h4>
+                            <div class="desc-product">
+                                <p>Classic Blue Denim</p>
+                            </div>
+                            <div class="product-price-box">
+                                <div class="price-info">
+                                    <span class="old-price">599.00 $</span>
+                                    <span class="current-price">419.00 $</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Ticker hover effect
+            const ticker = document.querySelector('.ticker-container');
+
+            ticker.addEventListener('mouseenter', () => {
+                ticker.style.animationPlayState = 'paused';
+            });
+
+            ticker.addEventListener('mouseleave', () => {
+                ticker.style.animationPlayState = 'running';
+            });
+
+            // Simulate loading products from API
+            /*
+            setTimeout(() => {
+              fetch('https://api.example.com/products/women-shirts')
+                .then(response => response.json())
+                .then(products => {
+                  const productList = document.querySelector('.collection-list');
+                  productList.innerHTML = products.map(product => `
+                    <li>
+                      <div class="collection-card">
+                        ${product.discount ? `<div class="badge-container"><span class="discount-badge">-${product.discount}%</span></div>` : ''}
+                        <div class="img-container">
+                          <a href="#">
+                            <img class="img-cart" src="${product.image}" alt="${product.name}">
+                          </a>
+                        </div>
+                        <div class="acation-list">
+                          <ul class="action-menu">
+                            <li><a href="#"><ion-icon name="heart-outline"></ion-icon></a></li>
+                            <li><a href="#"><ion-icon name="cart-outline"></ion-icon></a></li>
+                          </ul>
+                        </div>
+                        <div class="card-content">
+                          <h4 class="cart-title">${product.name}</h4>
+                          <div class="desc-product"><p>${product.description}</p></div>
+                          <div class="product-price-box">
+                            <div class="price-info">
+                              ${product.oldPrice ? `<span class="old-price">${product.oldPrice} $</span>` : ''}
+                              <span class="current-price">${product.price} $</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  `).join('');
+                });
+            }, 1500);
+            */
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+<svg width="200" height="60" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+    <text x="10" y="40" font-family="Segoe UI, sans-serif" font-size="40" font-weight="bold">
+        <tspan fill="hsl(5, 100%, 69%)">M</tspan>
+        <tspan fill="black">ela</tspan>
+    </text>
+</svg>

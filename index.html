@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeLa - Find what you wish for</title>
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./dress_vector.svg" type="image/svg+xml">
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/media.css">
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet"> -->
+  <!-- 
+    - preload banner
+  -->
+  <!-- <link rel="preload" href="./assets/images/hero-banner.png" as="image"> -->
+</head>
+
+<body id="top">
+  <!-- 
+    - # start  HEADER
+  -->
+  <header class="header" data-header>
+    <div class="container">
+      <div class=" top">
+        <div class="ovelay"></div>
+
+        <div class="search-bar">
+
+          <button class="search-button">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+          <form action="submit" method="get">
+            <input type="search" name="search" placeholder="search" id="">
+          </form>
+        </div>
+        <button class="menu">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+        <div class="logo">
+          <a href="#">
+            <img src="./Mela.svg" alt="Mela">
+          </a>
+        </div>
+        <div class="acation-list">
+          <ul class="action-menu">
+            <li>
+              <a href="#" class="button" role="button" tabindex="0">
+                <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                <span class="action-text">Sign in</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button" role="button" tabindex="0">
+                <ion-icon name="heart-outline"></ion-icon>
+                <span class="action-text">Wishlist</span>
+                <data class="action-badge" value="5" aria-hidden="true">5</data>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="button" role="button" tabindex="0">
+                <ion-icon name="cart-outline"></ion-icon>
+                <span class="action-text">Cart</span>
+                <data class="action-badge" value="4" aria-hidden="true">5</data>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <div class="logo">
+          <a href="#">
+            <img src="./Mela.svg" alt="Mela">
+          </a>
+        </div>
+        <ul class="navbar-list">
+          <li><a href="#" class="navbar-link">Home</a></li>
+          <li class="dropdown">
+            <a href="#" class="navbar-link">Women</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h3>Clothing</h3>
+                <ul>
+                  <li><a href="#">Dress</a></li>
+                  <li><a href="#">Tops</a></li>
+                  <li><a href="#">Jackets & Coats</a></li>
+                  <li><a href="#">Pants & Jeans</a></li>
+                  <li><a href="#">Shirts & Blouses</a></li>
+                  <li><a href="#">Sweatshirts</a></li>
+                  <li><a href="#">Skirts</a></li>
+                  <li><a href="#">Lingerie</a></li>
+                  <li><a href="#">Beachwear</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Footwear</h3>
+                <ul>
+                  <li><a href="#">Flats</a></li>
+                  <li><a href="#">Sneakers</a></li>
+                  <li><a href="#">Heels</a></li>
+                  <li><a href="#">Boots</a></li>
+                  <li><a href="#">Sandals</a></li>
+                  <li><a href="#">Slippers</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Bags</h3>
+                <ul>
+                  <li><a href="#">Shoulder Bags</a></li>
+                  <li><a href="#">Clutch</a></li>
+                  <li><a href="#">Tote Bags</a></li>
+                  <li><a href="#">Backpacks</a></li>
+                  <li><a href="#">Laptop Bags</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Jewelry & Accessories</h3>
+                <ul>
+                  <li><a href="#">Earrings</a></li>
+                  <li><a href="#">Necklaces</a></li>
+                  <li><a href="#">Rings</a></li>
+                  <li><a href="#">Bracelets & Anklets</a></li>
+                  <li><a href="#">Scarves</a></li>
+                  <li><a href="#">Hair Accessories</a></li>
+                  <li><a href="#">Socks</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Beauty</h3>
+                <ul>
+                  <li><a href="#">Beauty & Body</a></li>
+                  <li><a href="#">Skincare</a></li>
+                  <li><a href="#">Haircare</a></li>
+                  <li><a href="#">Bodycare</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="navbar-link">Men</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h3>Men's Clothing</h3>
+                <ul>
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Shirts</a></li>
+                  <li><a href="#">Pants & Jeans</a></li>
+                  <li><a href="#">Jackets & Coats</a></li>
+                  <li><a href="#">Suits</a></li>
+                  <li><a href="#">Sweatshirts & Hoodies</a></li>
+                  <li><a href="#">Shorts</a></li>
+                  <li><a href="#">Underwear</a></li>
+                  <li><a href="#">Swimwear</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Men's Footwear</h3>
+                <ul>
+                  <li><a href="#">Sneakers</a></li>
+                  <li><a href="#">Formal Shoes</a></li>
+                  <li><a href="#">Boots</a></li>
+                  <li><a href="#">Sandals</a></li>
+                  <li><a href="#">Slippers</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Men's Accessories</h3>
+                <ul>
+                  <li><a href="#">Watches</a></li>
+                  <li><a href="#">Belts</a></li>
+                  <li><a href="#">Wallets</a></li>
+                  <li><a href="#">Sunglasses</a></li>
+                  <li><a href="#">Hats & Caps</a></li>
+                  <li><a href="#">Ties</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Men's Bags</h3>
+                <ul>
+                  <li><a href="#">Backpacks</a></li>
+                  <li><a href="#">Laptop Bags</a></li>
+                  <li><a href="#">Messenger Bags</a></li>
+                  <li><a href="#">Duffle Bags</a></li>
+                  <li><a href="#">Briefcases</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Grooming</h3>
+                <ul>
+                  <li><a href="#">Skincare</a></li>
+                  <li><a href="#">Haircare</a></li>
+                  <li><a href="#">Shaving Products</a></li>
+                  <li><a href="#">Fragrances</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="navbar-link">Kids</a>
+            <div class="dropdown-menu">
+              <div class="dropdown-section">
+                <h3>Kids' Clothing</h3>
+                <ul>
+                  <li><a href="#">T-Shirts</a></li>
+                  <li><a href="#">Pants & Leggings</a></li>
+                  <li><a href="#">Dresses</a></li>
+                  <li><a href="#">Jackets & Hoodies</a></li>
+                  <li><a href="#">Pajamas</a></li>
+                  <li><a href="#">Shorts</a></li>
+                  <li><a href="#">Skirts</a></li>
+                  <li><a href="#">Swimwear</a></li>
+                  <li><a href="#">Underwear</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Kids' Footwear</h3>
+                <ul>
+                  <li><a href="#">Sneakers</a></li>
+                  <li><a href="#">Sandals</a></li>
+                  <li><a href="#">Boots</a></li>
+                  <li><a href="#">Slippers</a></li>
+                  <li><a href="#">School Shoes</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Kids' Accessories</h3>
+                <ul>
+                  <li><a href="#">Backpacks</a></li>
+                  <li><a href="#">Hats & Caps</a></li>
+                  <li><a href="#">Socks</a></li>
+                  <li><a href="#">Hair Accessories</a></li>
+                  <li><a href="#">Sunglasses</a></li>
+                  <li><a href="#">Watches</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Baby Essentials</h3>
+                <ul>
+                  <li><a href="#">Bodysuits</a></li>
+                  <li><a href="#">Blankets</a></li>
+                  <li><a href="#">Bibs</a></li>
+                  <li><a href="#">Diaper Bags</a></li>
+                  <li><a href="#">Pacifiers</a></li>
+                </ul>
+              </div>
+              <div class="dropdown-section">
+                <h3>Toys & Games</h3>
+                <ul>
+                  <li><a href="#">Educational Toys</a></li>
+                  <li><a href="#">Stuffed Animals</a></li>
+                  <li><a href="#">Building Blocks</a></li>
+                  <li><a href="#">Puzzles</a></li>
+                  <li><a href="#">Board Games</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="#" class="navbar-link">Shop</a></li>
+          <li><a href="#" class="navbar-link">Best Sellers</a></li>
+          <li><a href="#" class="navbar-link">Services</a></li>
+          <li><a href="#" class="navbar-link">Offers</a></li>
+          <li><a href="#" class="navbar-link">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- 
+    - # End start  HEADER
+  -->
+  <!-- Start slide baner -->
+  <section class="home-slideshow ">
+    <div class="slideshow-container">
+      <div class="slide ">
+        <a href="">
+          <img src="./assets/images/Baner/Gemini_Generated_Image_wjtcm3wjtcm3wjtc.jpeg" alt="">
+        </a>
+      </div>
+      <div class="slide  ">
+        <a href="">
+          <img src="./assets/images/Baner/2Q(3).jpeg" alt="">
+        </a>
+      </div>
+      <div class="slide active">
+        <a href="">
+          <img src="./assets/images/Baner/SUMMR-APR10-MOB-EN---001.jpg" alt="">
+        </a>
+      </div>
+      <div class="slide ">
+        <a href="">
+          <img src="./assets/images/Baner/2Q==.jpeg" alt="">
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Start slide baner -->
+
+  <!-- start section Ad  -->
+  <section class="section cta-ad">
+    <div class="container">
+      <ul class="cta-list">
+        <li>
+          <div class="cta-card">
+            <p class="card-subtitle">Adidas Shoes</p>
+            <h3 class=" card-title">The Summer Sale Off 50%</h3>
+            <a href="#" class="btn btn-link">
+              <span>Shop Now</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="cta-card">
+            <p class="card-subtitle">Nike Shoes</p>
+            <h3 class="h2 card-title">Makes Yourself Keep Sporty</h3>
+            <a href="#" class="btn btn-link">
+              <span>Shop Now</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true" role="img" class="md hydrated"></ion-icon>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- End section Ad  -->
+
+
+  <!-- start New collction -->
+  <section class="section  New-collection">
+    <div class="container">
+      <div class="main-heading  ">
+        <h2>New collction</h2>
+        <a href="#" class="view-all">View All</a>
+      </div>
+      <ul class="collection-list">
+        <li>
+          <div class="collection-card">
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/party dress/dress_party_chiffon_women_blue_M (32)(1).jpg.jpg"
+                  alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">party Dress</h4>
+              <div class="desc-product">
+                <p>palm-patterned summer piece.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/schos/getimg_ai_img-jHEj6KeTZseB1jMHQEitA.jpeg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Shoes</h4>
+              <div class="desc-product">
+                <p>Stylish pink running shoes</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/party dress/dress_party_chiffon_women_blue_M (91).jpg"
+                  alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">party Dress</h4>
+              <div class="desc-product">
+                <p>Stylish long burgundy winter coat</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+
+          <div class="collection-card">
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (7).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">party Dress</h4>
+              <div class="desc-product">
+                <p>Stylish long burgundy winter coat</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- End New collction -->
+  <section class="section Women">
+    <div class="container">
+      <div class="main-heading  ">
+        <h2>New For wmen</h2>
+        <p>Elegant and colorful dresses for modern women.</p>
+      </div>
+      <ul class="collection-list ">
+        <li>
+          <div class="collection-card">
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (43).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (10).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (11).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (47).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (47).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (47).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (47).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart" src="./assets/images/dress/dress_silk_women_M_blue (47).jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="section Women">
+    <div class="container">
+      <div class="sec-heading  ">
+        <h2>Shirts For wmen</h2>
+        <!-- <p>Elegant and colorful dresses for modern women.</p> -->
+      </div>
+      <ul class="collection-list ">
+        <li>
+          <div class="collection-card">
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart"
+                  src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (1)(1).jpg.jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart"
+                  src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (1)(2).jpg.jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="#">
+                <img class="img-cart"
+                  src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (2)(1).jpg.jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="collection-card">
+            <h3 class="cart-title"></h3>
+            <div class="img-container">
+              <a href="">
+                <img class="img-cart"
+                  src="./assets/images/sweatshirts/sweatshirts-party-chiffon-women-blue-M (4)(3).jpg.jpg" alt="">
+              </a>
+            </div>
+            <div class="acation-list">
+              <ul class="action-menu">
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="heart-outline"></ion-icon>
+                    <!-- <span class="action-text">Wishlist</span> -->
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="button" role="button" tabindex="0">
+                    <ion-icon name="cart-outline"></ion-icon>
+                    <!-- <span class="action-text">Cart</span> -->
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="card-content">
+              <h4 class="cart-title">Crop Top</h4>
+              <div class="desc-product">
+                <p>Leopard Print Biker Shorts</p>
+              </div>
+              <div class="product-price-box">
+                <div class="price-info">
+                  <span class="old-price">499.00 $</span>
+                  <span class="current-price">369.00 $</span>
+                  <span class="discount-badge">-26%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="banner">
+    <div class="container">
+      <div class="banner-new">
+      </div>
+    </div>
+  </section>
+  <section class="section category">
+    <div class="category container">
+      <div class="category-item">
+        <div class="img-container">
+          <a href="/collections/women">
+            <img class="img-cart" src="./assets/images/Baner/Elegance_simple_compose.png" alt="
+            Women'sCollection">
+          </a>
+        </div>
+        <div class="Dec-category">Women's Collection</div>
+      </div>
+      <div class="category-item">
+        <div class="img-container">
+          <a href="/collections/men">
+            <img class="img-cart" src="./assets/images/Baner/Summer Smile_simple_compose.png" alt="Men's Collection">
+          </a>
+        </div>
+        <div class="Dec-category ">Men's Collection</div>
+      </div>
+    </div>
+  </section>
+  <section class="featured-categories section">
+    <div class="container">
+      <h2 class="sec-heading">Featured Categories</h2>
+      <ul class="category-list">
+        <li>
+          <div class="category-item">
+            <div class="img-container">
+              <img src="./assets/images/skirts/skirt_party_chiffon_women_blue_M (6)(1).jpg" alt="Dresses"
+                class="img-cover">
+            </div>
+            <a href="#" class="Dec-category">Dresses</a>
+          </div>
+        </li>
+        <li>
+          <div class="category-item">
+            <div class="img-container">
+              <img src="./assets/images/skirts/skirt_party_chiffon_women_blue_M (1)(1).jpg" alt="Tops"
+                class="img-cover">
+            </div>
+            <a href="#" class="Dec-category">Tops</a>
+          </div>
+        </li>
+        <li>
+          <div class="category-item">
+            <div class="img-container">
+              <img src="./assets/images/pantis/pants_silk_women_M_blue (14).jpg" alt="New Arrivals" class="img-cover">
+            </div>
+            <a href="#" class="Dec-category">New Arrivals</a>
+          </div>
+        </li>
+        <li>
+          <div class="category-item">
+            <div class="img-container">
+              <img src="./assets/images/clothing/womens_outdoor_clothing_party_chiffon_blue_M (5)(1).jpg.png" alt="Sale"
+                class="img-cover">
+            </div>
+            <a href="#" class="Dec-category">Sale</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="testimonials section">
+    <div class="container">
+      <h2 class="sec-heading">What Our Customers Say</h2>
+      <div class="testimonial-carousel">
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"I absolutely love the quality of the dress I purchased! It fits perfectly and
+            the fabric feels amazing. Will definitely be shopping here again."</p>
+          <p class="testimonial-author">- Sarah M.</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"The customer service was excellent. They helped me find exactly what I was
+            looking for and the shipping was super fast!"</p>
+          <p class="testimonial-author">- John B.</p>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-quote">"Such unique and stylish pieces! I always get compliments when I wear clothes
+            from MeLa."</p>
+          <p class="testimonial-author">- Emily K.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="lookbook section">
+    <div class="container">
+      <h2 class="sec-heading">Our Latest Looks</h2>
+      <div class="lookbook-grid">
+        <div class="lookbook-item">
+          <img src="./assets/images/dress/dress_silk_women_M_blue (67).jpg" alt="Look 1" class="img-cover">
+          <div class="lookbook-overlay">
+            <a href="#" class="btn">Shop This Look</a>
+          </div>
+        </div>
+        <div class="lookbook-item">
+          <img src="./assets/images/clothing/womens_outdoor_clothing_party_chiffon_blue_M (5)(1).jpg.png" alt="Look 2"
+            class="img-cover">
+          <div class="lookbook-overlay">
+            <a href="#" class="btn">Shop This Look</a>
+          </div>
+        </div>
+        <div class="lookbook-item">
+          <img src="./assets/images/clothing/womens_outdoor_clothing_party_chiffon_blue_M (5)(2).jpg.png" alt="Look 3"
+            class="img-cover">
+          <div class="lookbook-overlay">
+            <a href="#" class="btn">Shop This Look</a>
+          </div>
+        </div>
+        <div class="lookbook-item">
+          <img src="./assets/images/collection-2.jpg" alt="Look 4" class="img-cover">
+          <div class="lookbook-overlay">
+            <a href="#" class="btn">Shop This Look</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="blog section">
+    <div class="container">
+      <h2 class="sec-heading">Latest From Our Blog</h2>
+      <ul class="blog-list">
+        <li class="blog-item">
+          <div class="blog-image">
+            <img src="./assets/images/clothing/womens_outdoor_clothing_party_chiffon_blue_M (1)(1).jpg.jpg"
+              alt="Blog Post 1" class="img-cover">
+          </div>
+          <div class="blog-content">
+            <h3 class="h4 blog-title"><a href="#">The Ultimate Guide to Summer Style</a></h3>
+            <p class="blog-excerpt">Discover the must-have pieces and styling tips to stay chic all summer long.</p>
+            <a href="#" class="btn-link">Read More</a>
+          </div>
+        </li>
+        <li class="blog-item">
+          <div class="blog-image">
+            <img src="./assets/images/clothing/womens_outdoor_clothing_party_chiffon_blue_M (7)(1).jpg.jpg"
+              alt="Blog Post 2" class="img-cover">
+          </div>
+          <div class="blog-content">
+            <h3 class="h4 blog-title"><a href="#">How to Choose the Perfect Dress for Every Occasion</a></h3>
+            <p class="blog-excerpt">From casual outings to formal events, learn how to select the ideal dress.</p>
+            <a href="#" class="btn-link">Read More</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <!-- 
+    - #FOOTER
+  -->+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-column">
+          <h3 class="footer-heading">About MeLa</h3>
+          <p class="footer-text">
+            Discover the latest trends and timeless styles in our curated collection of women's clothing and
+            accessories. We're passionate about quality and helping you find pieces you'll love.
+          </p>
+          <ul class="footer-social-list">
+            <li>
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="footer-social-link">
+                <ion-icon name="logo-pinterest"></ion-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Customer Service</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">Contact Us</a></li>
+            <li><a href="#" class="footer-link">Shipping & Delivery</a></li>
+            <li><a href="#" class="footer-link">Returns & Exchanges</a></li>
+            <li><a href="#" class="footer-link">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-list">
+            <li><a href="#" class="footer-link">New Arrivals</a></li>
+            <li><a href="#" class="footer-link">Best Sellers</a></li>
+            <li><a href="#" class="footer-link">Collections</a></li>
+            <li><a href="#" class="footer-link">My Account</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h3 class="footer-heading">Newsletter</h3>
+          <p class="footer-text">
+            Stay up-to-date with our new arrivals, exclusive offers, and style inspiration.
+          </p>
+          <form action="#" class="footer-newsletter-form">
+            <input type="email" name="email" placeholder="Enter your email address" required
+              class="footer-newsletter-input">
+            <button type="submit" class="footer-newsletter-button">Subscribe</button>
+          </form>
+          <div class="footer-payment">
+            <img src="./assets/images/payment-icons.png" alt="Payment methods" class="payment-icons">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">
+          &copy; 2025 MeLa. All rights reserved.
+        </p>
+        <a href="#top" class="back-to-top" aria-label="Back to Top">
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

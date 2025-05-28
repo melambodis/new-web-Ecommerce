@@ -1,0 +1,12 @@
+<svg width="120" height="60" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+  <text 
+    x="50" 
+    y="48" 
+    font-family="Segoe UI, sans-serif" 
+    font-size="40" 
+    font-weight="bold"
+    text-anchor="middle"
+  >
+    <tspan fill="hsl(5, 100%, 69%)">M</tspan><tspan fill="black">ela</tspan>
+  </text>
+</svg>
